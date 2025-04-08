@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- High Contrast Colors -->
+    <color name="high_contrast_primary">#0066CC</color>
+    <color name="high_contrast_primary_variant">#004C99</color>
+    <color name="high_contrast_on_primary">#FFFFFF</color>
+    
+    <color name="high_contrast_secondary">#FF8800</color>
+    <color name="high_contrast_secondary_variant">#CC6600</color>
+    <color name="high_contrast_on_secondary">#000000</color>
+    
+    <color name="high_contrast_background">#FFFFFF</color>
+    <color name="high_contrast_surface">#F5F5F5</color>
+    <color name="high_contrast_on_background">#000000</color>
+    <color name="high_contrast_on_surface">#000000</color>
+    
+    <color name="high_contrast_text_primary">#000000</color>
+    <color name="high_contrast_text_secondary">#333333</color>
+    <color name="high_contrast_text_tertiary">#666666</color>
+    <color name="high_contrast_text_hint">#757575</color>
+    
+    <color name="high_contrast_error">#CC0000</color>
+    <color name="high_contrast_ripple">#80FFFFFF</color>
+    
+    <!-- High Contrast Switch Colors -->
+    <color name="high_contrast_switch_thumb_enabled">#0066CC</color>
+    <color name="high_contrast_switch_thumb_disabled">#AAAAAA</color>
+    <color name="high_contrast_switch_track_enabled">#80CCCCCC</color>
+    <color name="high_contrast_switch_track_disabled">#80AAAAAA</color>
+    
+    <!-- High Contrast Switch Color State List -->
+    <color name="high_contrast_switch_thumb">@color/high_contrast_switch_thumb_selector</color>
+    <color name="high_contrast_switch_track">@color/high_contrast_switch_track_selector</color>
+</resources>

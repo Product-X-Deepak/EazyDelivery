@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Base configuration for all domains -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Configuration for API domains -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.eazydelivery.com</domain>
+        <domain includeSubdomains="true">dev-api.eazydelivery.com</domain>
+        <!-- Set a longer expiration date (3 years from now) to reduce update frequency -->
+        <pin-set expiration="2027-04-08">
+            <!-- Primary pins -->
+            <pin digest="SHA-256">Vjs8r4z+80wjNcr1YKepWQboSIRi63WsWXhIMN+eWys=</pin>
+            <pin digest="SHA-256">YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg=</pin>
+            <!-- Backup pins -->
+            <pin digest="SHA-256">FEzVOUp4dF3gI0ZVPRJhFbSJVXR+uQmMH65xhs1glH4=</pin>
+            <pin digest="SHA-256">Y9mvm0exBk1JoQ57f9Vm28jKo5lFm/woKcVxrYxu80o=</pin>
+        </pin-set>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+
+    <!-- Debug configuration for development -->
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>

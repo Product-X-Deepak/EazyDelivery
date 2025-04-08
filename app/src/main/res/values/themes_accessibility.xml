@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- High Contrast Theme -->
+    <style name="Theme.EazyDelivery.HighContrast" parent="Theme.EazyDelivery">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/high_contrast_primary</item>
+        <item name="colorPrimaryVariant">@color/high_contrast_primary_variant</item>
+        <item name="colorOnPrimary">@color/high_contrast_on_primary</item>
+        
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/high_contrast_secondary</item>
+        <item name="colorSecondaryVariant">@color/high_contrast_secondary_variant</item>
+        <item name="colorOnSecondary">@color/high_contrast_on_secondary</item>
+        
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/high_contrast_background</item>
+        <item name="colorSurface">@color/high_contrast_surface</item>
+        <item name="colorOnBackground">@color/high_contrast_on_background</item>
+        <item name="colorOnSurface">@color/high_contrast_on_surface</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/high_contrast_text_primary</item>
+        <item name="android:textColorSecondary">@color/high_contrast_text_secondary</item>
+        <item name="android:textColorTertiary">@color/high_contrast_text_tertiary</item>
+        <item name="android:textColorHint">@color/high_contrast_text_hint</item>
+        
+        <!-- Component styles -->
+        <item name="materialButtonStyle">@style/Widget.EazyDelivery.HighContrast.Button</item>
+        <item name="textInputStyle">@style/Widget.EazyDelivery.HighContrast.TextInputLayout</item>
+        <item name="switchStyle">@style/Widget.EazyDelivery.HighContrast.Switch</item>
+        <item name="checkboxStyle">@style/Widget.EazyDelivery.HighContrast.CheckBox</item>
+        <item name="radioButtonStyle">@style/Widget.EazyDelivery.HighContrast.RadioButton</item>
+    </style>
+    
+    <!-- High Contrast Button Style -->
+    <style name="Widget.EazyDelivery.HighContrast.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/high_contrast_on_primary</item>
+        <item name="backgroundTint">@color/high_contrast_primary</item>
+        <item name="rippleColor">@color/high_contrast_ripple</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+    
+    <!-- High Contrast TextInputLayout Style -->
+    <style name="Widget.EazyDelivery.HighContrast.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/high_contrast_primary</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="hintTextColor">@color/high_contrast_primary</item>
+        <item name="android:textColorHint">@color/high_contrast_text_hint</item>
+        <item name="errorTextColor">@color/high_contrast_error</item>
+        <item name="errorStrokeWidth">2dp</item>
+    </style>
+    
+    <!-- High Contrast Switch Style -->
+    <style name="Widget.EazyDelivery.HighContrast.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="thumbTint">@color/high_contrast_switch_thumb</item>
+        <item name="trackTint">@color/high_contrast_switch_track</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/high_contrast_text_primary</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+    
+    <!-- High Contrast CheckBox Style -->
+    <style name="Widget.EazyDelivery.HighContrast.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/high_contrast_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/high_contrast_text_primary</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+    
+    <!-- High Contrast RadioButton Style -->
+    <style name="Widget.EazyDelivery.HighContrast.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/high_contrast_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/high_contrast_text_primary</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+</resources>

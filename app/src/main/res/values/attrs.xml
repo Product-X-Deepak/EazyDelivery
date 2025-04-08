@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PlatformView">
+        <attr name="platformName" format="string" />
+        <attr name="platformColor" format="color" />
+        <attr name="platformEnabled" format="boolean" />
+    </declare-styleable>
+
+    <!-- Accessibility attributes -->
+    <attr name="accessibilityHint" format="string" />
+    <attr name="accessibilityAction" format="string" />
+
+    <!-- Attributes for AccessibleTextView -->
+    <declare-styleable name="AccessibleTextView">
+        <attr name="accessibilityHint" />
+        <attr name="accessibilityAction" />
+    </declare-styleable>
+
+    <!-- Attributes for AccessibleButton -->
+    <declare-styleable name="AccessibleButton">
+        <attr name="accessibilityHint" />
+        <attr name="accessibilityAction" />
+    </declare-styleable>
+
+    <!-- Attributes for AccessibleImageView -->
+    <declare-styleable name="AccessibleImageView">
+        <attr name="accessibilityHint" />
+        <attr name="accessibilityAction" />
+        <attr name="isDecorative" format="boolean" />
+    </declare-styleable>
+
+    <!-- Attributes for AccessibleEditText -->
+    <declare-styleable name="AccessibleEditText">
+        <attr name="accessibilityHint" />
+        <attr name="accessibilityAction" />
+        <attr name="errorMessage" format="string" />
+    </declare-styleable>
+</resources>

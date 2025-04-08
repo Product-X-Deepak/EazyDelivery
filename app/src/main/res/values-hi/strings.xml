@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EazyDelivery</string>
+
+    <!-- Common -->
+    <string name="ok">ठीक है</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="save">सहेजें</string>
+    <string name="next">अगला</string>
+    <string name="skip">छोड़ें</string>
+    <string name="get_started">शुरू करें</string>
+
+    <!-- Navigation -->
+    <string name="home">होम</string>
+    <string name="analytics">विश्लेषण</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="settings">सेटिंग्स</string>
+
+    <!-- Settings -->
+    <string name="language">भाषा</string>
+    <string name="language_settings">भाषा सेटिंग्स</string>
+    <string name="select_language">अपनी पसंदीदा भाषा चुनें</string>
+    <string name="language_restart_note">कुछ परिवर्तनों के पूरी तरह से प्रभावी होने के लिए ऐप को पुनरारंभ करना पड़ सकता है</string>
+    <string name="back">वापस</string>
+    <string name="dark_mode">डार्क मोड</string>
+    <string name="biometric_authentication">बायोमेट्रिक प्रमाणीकरण</string>
+    <string name="biometric_settings">बायोमेट्रिक सेटिंग्स</string>
+    <string name="enable_biometric">बायोमेट्रिक प्रमाणीकरण सक्षम करें</string>
+    <string name="biometric_subtitle">एप को अनलॉक करने के लिए फिंगरप्रिंट या चेहरा पहचान का उपयोग करें</string>
+    <string name="biometric_info">आपका बायोमेट्रिक डेटा आपके डिवाइस पर सुरक्षित रूप से संग्रहीत किया जाता है और कभी भी EazyDelivery या किसी तीसरे पक्ष के साथ साझा नहीं किया जाता है।</string>
+    <string name="notifications">सूचनाएं</string>
+    <string name="terms_and_conditions">नियम और शर्तें</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="help_and_support">सहायता और समर्थन</string>
+    <string name="logout">लॉगआउट</string>
+    <string name="customer_support">ग्राहक सहायता</string>
+    <string name="contact_admin">व्यवस्थापक से संपर्क करें</string>
+
+    <!-- Phone Login -->
+    <string name="login_title">EazyDelivery में आपका स्वागत है</string>
+    <string name="phone_login_subtitle">जारी रखने के लिए अपना फोन नंबर दर्ज करें</string>
+    <string name="phone_number">फोन नंबर</string>
+    <string name="send_otp">OTP भेजें</string>
+    <string name="terms_and_conditions_agreement">जारी रखकर, आप हमारी सेवा की शर्तों और गोपनीयता नीति से सहमत हैं</string>
+
+    <!-- OTP Verification -->
+    <string name="verify_otp">OTP सत्यापित करें</string>
+    <string name="otp_sent_to">OTP %s पर भेजा गया</string>
+    <string name="verify">सत्यापित करें</string>
+    <string name="didnt_receive_otp">OTP नहीं मिला?</string>
+    <string name="resend">पुनः भेजें</string>
+    <string name="resend_in_seconds">%d सेकंड में पुनः भेजें</string>
+
+    <!-- User Onboarding -->
+    <string name="tutorial_title_1">ऑर्डर स्वतः स्वीकार करें</string>
+    <string name="tutorial_desc_1">EazyDelivery को आपके मापदंडों को पूरा करने वाले ऑर्डर स्वचालित रूप से स्वीकार करने दें</string>
+    <string name="tutorial_title_2">अपनी कमाई पर नज़र रखें</string>
+    <string name="tutorial_desc_2">सभी प्लेटफॉर्म पर अपनी दैनिक, साप्ताहिक और मासिक कमाई पर नज़र रखें</string>
+    <string name="tutorial_title_3">अपने अनुभव को अनुकूलित करें</string>
+    <string name="tutorial_desc_3">न्यूनतम ऑर्डर राशि सेट करें और प्रत्येक प्लेटफॉर्म के लिए सूचनाएं अनुकूलित करें</string>
+    <string name="permissions_title">आवश्यक अनुमतियां</string>
+    <string name="permissions_desc">ऑर्डर स्वतः स्वीकार करने के लिए EazyDelivery को सूचनाओं और पहुंच सेवाओं तक पहुंच की आवश्यकता है</string>
+    <string name="accept_terms_and_conditions">मैं सेवा की शर्तों और गोपनीयता नीति को स्वीकार करता हूं</string>
+
+    <!-- Home Screen -->
+    <string name="welcome_message">EazyDelivery में आपका स्वागत है</string>
+    <string name="auto_accept_service">ऑटो-एक्सेप्ट सर्विस</string>
+    <string name="service_active">सेवा सक्रिय और चल रही है</string>
+    <string name="service_inactive">सेवा वर्तमान में निष्क्रिय है</string>
+    <string name="today_stats">आज के आंकड़े</string>
+    <string name="orders">ऑर्डर</string>
+    <string name="earnings">कमाई</string>
+    <string name="platforms">डिलीवरी प्लेटफॉर्म</string>
+    <string name="minimum_order_amount">न्यूनतम ऑर्डर राशि</string>
+    <string name="trial_period">परीक्षण अवधि</string>
+    <string name="trial_days_left">आपके परीक्षण में %d दिन शेष हैं</string>
+
+    <!-- Accessibility -->
+    <string name="notification_listener_service_label">EazyDelivery नोटिफिकेशन लिसनर</string>
+    <string name="accessibility_service_label">EazyDelivery एक्सेसिबिलिटी सर्विस</string>
+</resources>
