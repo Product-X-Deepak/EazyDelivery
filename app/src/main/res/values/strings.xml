@@ -41,6 +41,15 @@
     <string name="contact_admin">Contact Admin</string>
     <string name="admin_email">eazydeliverymain@gmail.com</string>
 
+    <!-- Package Names -->
+    <string name="package_swiggy" translatable="false">in.swiggy.deliveryapp</string>
+    <string name="package_zomato" translatable="false">com.zomato.delivery</string>
+    <string name="package_zepto" translatable="false">com.zepto.rider</string>
+    <string name="package_blinkit" translatable="false">app.blinkit.onboarding</string>
+    <string name="package_uber_eats" translatable="false">com.ubercab.driver</string>
+    <string name="package_bigbasket" translatable="false">com.bigbasket.delivery</string>
+    <string name="supported_packages" translatable="false">in.swiggy.deliveryapp,com.zomato.delivery,com.zepto.rider,app.blinkit.onboarding,com.ubercab.driver,com.bigbasket.delivery</string>
+
     <!-- Phone Login -->
     <string name="login_title">Welcome to EazyDelivery</string>
     <string name="phone_login_subtitle">Enter your phone number to continue</string>
@@ -48,10 +57,74 @@
     <string name="send_otp">Send OTP</string>
     <string name="terms_and_conditions_agreement">By continuing, you agree to our Terms of Service and Privacy Policy</string>
     <string name="confirm_phone_number">Confirm Phone Number</string>
-    <string name="confirm_phone_number_message">Please confirm your phone number:\n%1$s</string>
+    <string name="confirm_phone_number_message">Please confirm your phone number:\n%1$s\n\nWe will send a verification code to this number.</string>
     <string name="confirm">Confirm</string>
     <string name="edit">Edit</string>
-    <string name="phone_number_format">Format: %1$s</string>
+    <string name="phone_number_format">Formatted: %1$s</string>
+
+    <!-- Battery Optimization -->
+    <string name="battery_optimization_title">Battery Optimization</string>
+    <string name="battery_optimization_message">To ensure EazyDelivery works properly in the background, please disable battery optimization for this app.</string>
+    <string name="disable_battery_optimization">Disable</string>
+    <string name="dismiss">Dismiss</string>
+
+    <!-- Service Monitoring -->
+    <string name="service_monitor_notification_title">EazyDelivery is running</string>
+    <string name="service_monitor_notification_text">Monitoring for delivery orders</string>
+    <string name="service_monitor_channel_name">Service Status</string>
+    <string name="service_monitor_channel_description">Notifications about the status of the delivery monitoring service</string>
+
+    <!-- Error Handling -->
+    <string name="error_title">Error</string>
+    <string name="network_error_title">Network Error</string>
+    <string name="retry">Retry</string>
+    <string name="open_network_settings">Network Settings</string>
+    <string name="open_app_settings">App Settings</string>
+    <string name="relogin">Login Again</string>
+    <string name="try_again">Try Again</string>
+    <string name="error_no_internet_connection">No internet connection available</string>
+    <string name="error_connection_timeout">Connection timed out</string>
+    <string name="error_server_unreachable">Server is unreachable</string>
+    <string name="error_generic_network">A network error occurred</string>
+    <string name="error_server">Server error occurred</string>
+    <string name="error_client">Invalid request</string>
+    <string name="error_auth">Authentication error</string>
+    <string name="error_generic_api">API error occurred</string>
+    <string name="error_database">Database error occurred</string>
+    <string name="error_permission_denied">Permission denied</string>
+    <string name="error_feature_not_available">Feature not available</string>
+    <string name="error_unexpected">An unexpected error occurred</string>
+    <string name="suggestion_check_internet">Please check your internet connection and try again.</string>
+    <string name="suggestion_try_again_later">Please try again later.</string>
+    <string name="suggestion_contact_support">If the problem persists, please contact support.</string>
+    <string name="suggestion_grant_permission">Please grant the required permissions.</string>
+    <string name="suggestion_app_settings">Please enable the required permissions in app settings.</string>
+    <string name="suggestion_update_app">Please update the app to the latest version.</string>
+    <string name="suggestion_upgrade">Please upgrade your subscription to access this feature.</string>
+
+    <!-- Feedback -->
+    <string name="rate_app_title">Rate EazyDelivery</string>
+    <string name="rate_app_message">How would you rate your experience with EazyDelivery?</string>
+    <string name="star_rating">%d star rating</string>
+    <string name="feedback_title">Send Feedback</string>
+    <string name="feedback_message">Your feedback helps us improve the app. Please let us know what you think.</string>
+    <string name="rating">Rating</string>
+    <string name="category">Category</string>
+    <string name="comments">Comments</string>
+    <string name="contact_email_optional">Contact Email (Optional)</string>
+    <string name="include_device_info">Include device information</string>
+    <string name="include_app_logs">Include app logs</string>
+    <string name="submit">Submit</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="not_now">Not Now</string>
+    <string name="rate_on_play_store_title">Rate on Play Store</string>
+    <string name="rate_on_play_store_message">Thank you for your feedback! Would you like to rate EazyDelivery on the Play Store?</string>
+    <string name="rate_on_play_store">Rate on Play Store</string>
+    <string name="feedback_category_general">General</string>
+    <string name="feedback_category_bug">Bug Report</string>
+    <string name="feedback_category_feature">Feature Request</string>
+    <string name="feedback_category_performance">Performance Issue</string>
+    <string name="feedback_category_ui">UI/UX Feedback</string>
     <string name="phone_number_empty">Phone number cannot be empty</string>
     <string name="phone_number_invalid">Please enter a valid phone number</string>
     <string name="phone_number_length_invalid">Phone number must be exactly 10 digits</string>

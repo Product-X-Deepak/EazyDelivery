@@ -8,4 +8,4 @@
    android:canRetrieveWindowContent="true"
    android:settingsActivity="com.eazydelivery.app.MainActivity"
    android:canPerformGestures="true"
-   android:packageNames="in.swiggy.deliveryapp,com.zomato.delivery,com.zepto.rider,app.blinkit.onboarding,com.ubercab.driver,com.bigbasket.delivery" />
+   android:packageNames="@string/supported_packages" />

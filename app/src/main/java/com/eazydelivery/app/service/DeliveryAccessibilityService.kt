@@ -17,7 +17,10 @@ import com.eazydelivery.app.MainActivity
 import com.eazydelivery.app.R
 import com.eazydelivery.app.domain.repository.PlatformRepository
 import com.eazydelivery.app.domain.repository.ServiceRepository
+import com.eazydelivery.app.ml.MLModelManager
+import com.eazydelivery.app.ml.ScreenAnalysisResult
 import com.eazydelivery.app.ml.ScreenAnalyzer
+import com.eazydelivery.app.util.BackgroundTaskManager
 import com.eazydelivery.app.util.CacheManager
 import com.eazydelivery.app.util.Constants
 import com.eazydelivery.app.util.Constants.PACKAGE_SWIGGY
@@ -81,6 +84,12 @@ class DeliveryAccessibilityService : AccessibilityService() {
     @Inject
     lateinit var packageMigrationHelper: PackageMigrationHelper
 
+    @Inject
+    lateinit var mlModelManager: MLModelManager
+
+    @Inject
+    lateinit var backgroundTaskManager: BackgroundTaskManager
+
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private var isServiceActive = false
 
@@ -99,6 +108,14 @@ class DeliveryAccessibilityService : AccessibilityService() {
 
             // Start the service optimizer
             serviceOptimizer.startOptimizer(serviceScope)
+
+            // Initialize ML model manager
+            try {
+                mlModelManager.initialize()
+                Timber.d("ML model manager initialized")
+            } catch (e: Exception) {
+                errorHandler.handleException("DeliveryAccessibilityService.onCreate", e)
+            }
         }
     }
 
@@ -166,11 +183,41 @@ class DeliveryAccessibilityService : AccessibilityService() {
                             saveScreenshotForDebug(screenshot)
                         }
 
-                        // Analyze the screen
-                        val analysisResult = screenAnalyzer.analyzeScreen(screenshot, packageName, rootNode)
+                        // Use the optimized ML model manager for screen analysis
+                        serviceScope.launch {
+                            try {
+                                // Use the background task manager to get the optimal sampling interval
+                                val samplingInterval = backgroundTaskManager.getCurrentSamplingInterval()
 
-                        // Process the UI based on the analysis result and app
-                        processUIBasedOnAnalysis(packageName, rootNode, analysisResult)
+                                // Analyze the screen with the ML model
+                                val mlAnalysisResult = mlModelManager.analyzeScreen(screenshot)
+
+                                // Convert to the format expected by our existing code
+                                val analysisResult = ScreenAnalyzer.AnalysisResult(
+                                    acceptButtonFound = mlAnalysisResult.hasAcceptButton,
+                                    acceptButtonNode = findAcceptButtonInNode(rootNode, packageName),
+                                    confidence = mlAnalysisResult.confidence,
+                                    needsConfirmation = mlAnalysisResult.hasOrderDetails && !mlAnalysisResult.hasErrorMessage
+                                )
+
+                                // Log the analysis result
+                                Timber.d("ML screen analysis completed in ${mlAnalysisResult.processingTimeMs}ms with confidence ${mlAnalysisResult.confidence}")
+
+                                // Process the UI based on the analysis result and app
+                                processUIBasedOnAnalysis(packageName, rootNode, analysisResult)
+
+                                // Adjust the sampling interval based on the analysis result
+                                if (mlAnalysisResult.hasAcceptButton) {
+                                    // If we found an accept button, analyze more frequently
+                                    lastProcessedTime[packageName] = currentTime - (samplingInterval / 2)
+                                }
+                            } catch (e: Exception) {
+                                // Fall back to the original screen analyzer if ML analysis fails
+                                Timber.e(e, "ML analysis failed, falling back to original analyzer")
+                                val analysisResult = screenAnalyzer.analyzeScreen(screenshot, packageName, rootNode)
+                                processUIBasedOnAnalysis(packageName, rootNode, analysisResult)
+                            }
+                        }
                     }
                 }
 
@@ -520,6 +567,14 @@ class DeliveryAccessibilityService : AccessibilityService() {
 
         // Clean up any temporary files
         cleanupTempFiles()
+
+        // Clean up ML model resources
+        try {
+            mlModelManager.close()
+            Timber.d("ML model manager resources released")
+        } catch (e: Exception) {
+            errorHandler.handleException("DeliveryAccessibilityService.onDestroy", e)
+        }
 
         Timber.d("Accessibility Service destroyed")
     }
